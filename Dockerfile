@@ -5,10 +5,10 @@ FROM python:3.13-slim
 WORKDIR /app
 
 # Copia los archivos de tu proyecto al contenedor
-COPY requirements.txt .
+COPY src/requirements.txt .
 
 # Instala las dependencias
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r src/requirements.txt
 
 # Copiar el resto del contenido
 
