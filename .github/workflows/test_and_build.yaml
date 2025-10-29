@@ -40,4 +40,4 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: ghcr.io/OswaldoMH10/pruebaVideoCI-CD:latest
+        tags: ghcr.io/OswaldoMH10/pruebavideoci-cd:latest
