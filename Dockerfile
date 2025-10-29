@@ -4,13 +4,14 @@ FROM python:3.13-slim
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos de tu proyecto al contenedor
+# Copia el archivo de dependencias primero
 COPY src/requirements.txt .
 
 # Instala las dependencias
-RUN pip install --no-cache-dir -r src/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el resto del contenido
+# Copia todo el contenido de la carpeta src
+COPY src/ .
 
 # Comando por defecto para ejecutar tu aplicación
 CMD ["python", "main.py"]
